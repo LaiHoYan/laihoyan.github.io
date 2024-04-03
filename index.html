@@ -10,18 +10,15 @@
 
 <body>
 
-<label for="button">Click me!</label>
+<label id="label">Click me!</label>
 
-<button id="button">Button</button>
+<button onclick="myFunction()">Button</button>
+
 
 <script>
-
-document.getElementById("button").addEventListener("click", function() {
-
-document.getElementById("label1").innerHTML = "Hi 2!";
-
-});
-
+function myFunction() {
+  document.getElementById("label").innerHTML = "Hello World";
+}
 </script>
 
 </body>

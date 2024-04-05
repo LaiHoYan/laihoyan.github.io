@@ -1,56 +1,417 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="zxx" class=" js csstransitions"><head>
+  <title>Dragon Slayer a Games Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+  <!--meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Dragon Slayer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+     Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+  <script>
+     addEventListener("load", function () {
+       setTimeout(hideURLbar, 0);
+     }, false);
+     
+     function hideURLbar() {
+       window.scrollTo(0, 1);
+     }
+  </script>
+  <!--//meta tags ends here-->
+  <!--booststrap-->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+  <!--//booststrap end-->
+  <!-- font-awesome icons -->
+  <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+  <!-- //font-awesome icons -->
+  <!-- Nav-CSS -->	
+  <link href="css/nav.css" rel="stylesheet" type="text/css" media="all">
+  <script src="js/modernizr.custom.js"></script>
+  <!-- //Nav-CSS -->	
+  <!-- banner -->	
+  <link rel="stylesheet" type="text/css" href="css/uncover.css">
+  <!--//banner -->	
+  <!--stylesheets-->
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+  <!--//stylesheets-->
+  <link href="//fonts.googleapis.com/css?family=Cinzel+Decorative:400,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+<div id="_bsa_srv-CKYI627U_0"></div><div id="_bsa_srv-CKYI653J_1"></div></head>
+<body>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+  // format, zoneKey, segment:value, options
+  _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+}
+})();
+</script>
+<script>
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+// format, zoneKey, segment:value, options
+_bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+}
+})();
+</script>
+<script>
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+  // format, zoneKey, segment:value, options
+  _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+}
+})();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-98H8KRKT85"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+gtag('config', 'G-98H8KRKT85');
+</script>
 
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/assests/css/font-awesome.min.css">
+<!-- New toolbar-->
+<style>
+* {
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
+#w3lDemoBar.w3l-demo-bar {
+top: 0;
+right: 0;
+bottom: 0;
+z-index: 9999;
+padding: 40px 5px;
+padding-top:70px;
+margin-bottom: 70px;
+background: #0D1326;
+border-top-left-radius: 9px;
+border-bottom-left-radius: 9px;
+}
 
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
+#w3lDemoBar.w3l-demo-bar a {
+display: block;
+color: #e6ebff;
+text-decoration: none;
+line-height: 24px;
+opacity: .6;
+margin-bottom: 20px;
+text-align: center;
+}
 
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+#w3lDemoBar.w3l-demo-bar span.w3l-icon {
+display: block;
+}
+
+#w3lDemoBar.w3l-demo-bar a:hover {
+opacity: 1;
+}
+
+#w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+color: #e6ebff;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons {
+margin-top: 30px;
+border-top: 1px solid #41414d;
+padding-top: 40px;
+}
+#w3lDemoBar.w3l-demo-bar .demo-btns {
+border-top: 1px solid #41414d;
+padding-top: 30px;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+font-size: 26px;
+}
+#w3lDemoBar.w3l-demo-bar .no-margin-bottom{
+margin-bottom:0;
+}
+.toggle-right-sidebar span {
+background: #0D1326;
+width: 50px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+color: #e6ebff;
+border-radius: 50px;
+font-size: 26px;
+cursor: pointer;
+opacity: .5;
+}
+.pull-right {
+float: right;
+position: fixed;
+right: 0px;
+top: 70px;
+width: 90px;
+z-index: 99999;
+text-align: center;
+}
+/* ============================================================
+RIGHT SIDEBAR SECTION
+============================================================ */
+
+#right-sidebar {
+width: 90px;
+position: fixed;
+height: 100%;
+z-index: 1000;
+right: 0px;
+top: 0;
+margin-top: 60px;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+overflow-y: auto;
+}
+
+
+/* ============================================================
+RIGHT SIDEBAR TOGGLE SECTION
+============================================================ */
+
+.hide-right-bar-notifications {
+margin-right: -300px !important;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+
+
+
+@media (max-width: 992px) {
+#w3lDemoBar.w3l-demo-bar a.desktop-mode{
+  display: none;
+
+}
+}
+@media (max-width: 767px) {
+#w3lDemoBar.w3l-demo-bar a.tablet-mode{
+  display: none;
+
+}
+}
+@media (max-width: 568px) {
+#w3lDemoBar.w3l-demo-bar a.mobile-mode{
+  display: none;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons {
+  margin-top: 0px;
+  border-top: none;
+  padding-top: 0px;
+}
+#right-sidebar,.pull-right {
+  width: 90px;
+}
+#w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile{
+  margin-bottom: 0;
+}
+}
+</style>
+<div class="pull-right toggle-right-sidebar">
+<span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
+</div>
+
+<div id="right-sidebar" class="right-sidebar-notifcations nav-collapse">
+<div class="bs-example bs-example-tabs right-sidebar-tab-notification" data-example-id="togglable-tabs">
+
+<div id="w3lDemoBar" class="w3l-demo-bar">
+    <div class="demo-btns">
+    <a href="https://w3layouts.com/?p=43439">
+        <span class="w3l-icon -back">
+            <span class="fa fa-arrow-left"></span>
+        </span>
+        <span class="w3l-text">Back</span>
+    </a>
+    <a href="https://w3layouts.com/?p=43439">
+        <span class="w3l-icon -download">
+            <span class="fa fa-download"></span>
+        </span>
+        <span class="w3l-text">Download</span>
+    </a>
+    <a href="https://w3layouts.com/checkout/?add-to-cart=43439" class="no-margin-bottom-mobile">
+        <span class="w3l-icon -buy">
+            <span class="fa fa-shopping-cart"></span>
+        </span>
+        <span class="w3l-text">Buy</span>
+    </a>
+</div>
+    <!---<div class="responsive-icons">
+        <a href="#url" class="desktop-mode">
+            <span class="w3l-icon -desktop">
+                <span class="fa fa-desktop"></span>
+            </span>
+        </a>
+        <a href="#url" class="tablet-mode">
+            <span class="w3l-icon -tablet">
+                <span class="fa fa-tablet"></span>
+            </span>
+        </a>
+        <a href="#url" class="mobile-mode no-margin-bottom">
+            <span class="w3l-icon -mobile">
+                <span class="fa fa-mobile"></span>
+            </span>
+        </a>
+    </div>-->
+</div>
+<div class="right-sidebar-panel-content animated fadeInRight" tabindex="5003" style="overflow: hidden; outline: none;">
+</div>
+</div>
+</div>
+
+
+  <div class="header-outs" id="home">
+     <div class="header-w3layouts">
+        <div class="container">
+           <div class="right-side">
+              <p>
+                 <button id="trigger-overlay" type="button">
+                 <span class="fa fa-bars" aria-hidden="true"></span>
+                 </button>
+              </p>
+           </div>
+           <!-- open/close -->
+           <div class="overlay overlay-hugeinc">
+              <button type="button" class="overlay-close">Close</button>
+              <nav>
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="hero.html">Avatar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                 </ul>
+              </nav>
+           </div>
+           <div class="hedder-logo">
+              <h1><a href="index.html">   
+                 <img src="images/logo.png" class="img-fluid" alt="Responsive image">DS</a>
+              </h1>
+           </div>
+           <!-- /open/close -->
+           <!-- /navigation section -->
+        </div>
+        <div class="clearfix"> </div>
+     </div>
+     <!--banner-->
+     <div class="slides text-center">
+        <div class="slide one-img">
+           <div class="slider-up">
+              <h4>DS</h4>
+              <h5>Dragon<span class="fab fa-d-and-d"></span>Slayer</h5>
+              <div class="outs_more-buttn">
+                 <a href="contact.html">Book Now</a>
+              </div>
+           </div>
+           <div class="slide__img uncover"><div class="uncover__img" style="transform: scale(1);"></div>
+                  <div class="uncover__slices uncover__slices--vertical"><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div></div></div>
+        </div>
+        <div class="slide two-img slide--current">
+           <div class="slider-up">
+              <h4>DS</h4>
+              <h5>Dragon<span class="fab fa-d-and-d"></span>Slayer</h5>
+              <div class="outs_more-buttn">
+                 <a href="contact.html">Book Now</a>
+              </div>
+           </div>
+           <div class="slide__img uncover"><div class="uncover__img" style="transform: scale(1);"></div>
+                  <div class="uncover__slices uncover__slices--horizontal"><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(100%) translateY(0%);"></div></div></div>
+        </div>
+        <div class="slide three-img">
+           <div class="slider-up">
+              <h4>DS</h4>
+              <h5>Dragon<span class="fab fa-d-and-d"></span>Slayer</h5>
+              <div class="outs_more-buttn">
+                 <a href="contact.html">Book Now</a>
+              </div>
+           </div>
+           <div class="slide__img uncover"><div class="uncover__img" style="transform: scale(1);"></div>
+                  <div class="uncover__slices uncover__slices--vertical"><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div><div class="uncover__slice" style="color: rgb(17, 17, 17); transform: translateX(0%) translateY(0%);"></div></div></div>
+        </div>
+        <div class="slide four-img">
+           <div class="slider-up">
+              <h4>DS</h4>
+              <h5>Dragon<span class="fab fa-d-and-d"></span>Slayer</h5>
+              <div class="outs_more-buttn">
+                 <a href="contact.html">Book Now</a>
+              </div>
+           </div>
+           <div class="slide__img uncover"><div class="uncover__img" style="background-image: "></div>
+                  <div class="uncover__slices uncover__slices--horizontal"><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div></div></div>
+        </div>
+        <div class="slide five-img">
+           <div class="slider-up">
+              <h4>DS</h4>
+              <h5>Dragon<span class="fab fa-d-and-d"></span>Slayer</h5>
+              <div class="outs_more-buttn">
+                 <a href="contact.html">Book Now</a>
+              </div>
+           </div>
+           <div class="slide__img uncover"><div class="uncover__img" style="background-image: "></div>
+                  <div class="uncover__slices uncover__slices--vertical"><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div><div class="uncover__slice" style="color:#111"></div></div></div>
+        </div>
+        <div class="slide six-img">
+           <div class="slider-up">
+              <h4>DS</h4>
+              <h5>Dragon<span class="fab fa-d-and-d"></span>Slayer</h5>
+              <div class="outs_more-buttn">
+                 <a href="contact.html">Book Now</a>
+              </div>
+           </div>
+           <div class="slide__img uncover"><div class="uncover__img" style="background-image: "></div>
+                  <div class="uncover__slices uncover__slices--vertical"><div class="uncover__slice" style="color:#fff"></div><div class="uncover__slice" style="color:#fff"></div><div class="uncover__slice" style="color:#fff"></div></div></div>
+        </div>
+        <div class="clearfix"></div>
+     </div>
+     <ul class="pagination">
+        <li><span class="pagination__item"> </span></li>
+        <li><span class="pagination__item pagination__item--current"> </span></li>
+        <li><span class="pagination__item"> </span></li>
+        <li><span class="pagination__item"> </span></li>
+        <li><span class="pagination__item"> </span></li>
+        <li><span class="pagination__item"> </span></li>
+     </ul>
+     <div class="clearfix"></div>
+  </div>
+  <!--//banner-->
+  <!--Footer -->   
+  <footer class="py-2">
+     <div class="icons text-center py-md-3 pb-2">
+        <ul>
+           <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+           <li><a href="#"><span class="fas fa-envelope"></span></a></li>
+           <li><a href="#"><span class="fas fa-rss"></span></a></li>
+           <li><a href="#"><span class="fab fa-vk"></span></a></li>
         </ul>
-        {% endif %}
-      </header>
-      <section>
+     </div>
+     <div class="footer-below text-center">
+        <p>©2020 Dragon Slayer. All Rights Reserved | Design by <a href="https://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
+     </div>
+  </footer>
+  <!-- //Footer -->
+  <!-- js working-->
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <!--//js working-->
+  <!-- For-Banner -->
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/anime.min.js"></script>
+  <script src="js/uncover.js"></script>
+  <script src="js/demo1.js"></script>
+  <!-- //For-Banner -->
+  <!--nav menu-->
+  <script src="js/classie.js"></script>
+  <script src="js/demonav.js"></script>
+  <!-- //nav menu-->
+  <!-- bootstrap working-->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- // bootstrap working--> 
 
-      {{ content }}
 
-      </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
-</html>
+</body></html>

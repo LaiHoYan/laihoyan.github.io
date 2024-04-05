@@ -1,5 +1,4 @@
 <div class="container">
-    <pre id=jsonraw class=json-container></pre>
     <pre id=json class=json-container></pre>
     <pre id=json2 class=json-container></pre>
     <style>
@@ -21,7 +20,6 @@
             console.log(tree)
 
 
-            document.getElementById("jsonraw").innerHTML = tree.toHtml();
             document.getElementById("json").innerHTML = prettyPrintJson.toHtml(tree);
             document.getElementById("json2").innerHTML = json_tree(tree);;
 

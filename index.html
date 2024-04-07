@@ -12,9 +12,10 @@
             array.forEach(e => {
 
                 const item = new Item(e, e, IsFolder(e), []);
-                tree.push(item)
-
-                NestTree(item);
+                if (!e.startsWith(".")) {
+                    tree.push(item)
+                    NestTree(item);
+                }
             });
 
             console.log(tree)
@@ -28,41 +29,6 @@
         /////////////////////////////////////////////////////////////////////////////
         // >function /////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////
-
-
-        function json_tree(object) {
-            var json = "<ul>";
-            for (prop in object) {
-                console.log('key: ' + prop);
-                console.log('val: ' + JSON.stringify(object[prop]));
-                var value = object[prop];
-                switch (typeof(value)) {
-                    case "object":
-                        console.log('object');
-                        json += "<li>" + value.menu + json_tree(value.childs) + "</li>";
-                        break;
-                    default:
-                        console.log('not obj');
-                        json += "<li>" + value.menu + "</li>";
-                }
-            }
-            return json + "</ul>";
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         class Item {
             constructor(path, name, isFolder, child) {
                 this.path = path;

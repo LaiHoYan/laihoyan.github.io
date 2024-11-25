@@ -525,7 +525,63 @@
     <script src="TemplateSet/Namari/js/images-loaded.min.js"></script>
     <script src="TemplateSet/Namari/js/lightbox.min.js"></script>
     <script src="TemplateSet/Namari/js/site.js"></script>
-
+    <script>
+        // 當頁面加載完成時執行
+        document.addEventListener("DOMContentLoaded", () => {
+          const csvPath = "gallery-images.csv"; // CSV 文件路徑
+          const galleryImages = document.querySelectorAll("#gallery a img"); // 目標圖片節點
+          const minDelay = 1000; // 最小延遲時間 (毫秒)
+          const maxDelay = 5000; // 最大延遲時間 (毫秒)
+          let availableImages = []; // 用於存放未使用的圖片路徑
+      
+          // 從CSV加載圖片數據
+          async function loadCsvImages() {
+            const response = await fetch(csvPath);
+            const text = await response.text();
+            availableImages = text.trim().split("\n"); // 按行解析圖片路徑
+          }
+      
+          // 隨機從圖片路徑中選擇一個
+          function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * availableImages.length);
+            return availableImages.splice(randomIndex, 1)[0]; // 獲取並移除已選圖片
+          }
+      
+          // 動態替換圖片
+          function replaceImage(index) {
+            if (availableImages.length === 0) return; // 無可用圖片時停止
+            const randomImage = getRandomImage();
+            galleryImages[index].src = randomImage; // 替換圖片
+            galleryImages[index].parentElement.href = randomImage; // 替換父節點href
+            console.log(`Replaced image at index ${index} with ${randomImage}`);
+          }
+      
+          // 為每個圖片設置隨機替換
+          async function startReplacingImages() {
+            await loadCsvImages(); // 加載圖片數據
+            const usedIndexes = new Set(); // 紀錄已替換的圖片索引
+      
+            function scheduleNextReplacement(index) {
+              if (usedIndexes.size === galleryImages.length) return; // 所有圖片替換完畢
+              usedIndexes.add(index); // 標記已替換索引
+      
+              const delay = Math.random() * (maxDelay - minDelay) + minDelay; // 隨機延遲時間
+              setTimeout(() => {
+                replaceImage(index);
+                const nextIndex = (index + 1) % galleryImages.length; // 獲取下一索引
+                scheduleNextReplacement(nextIndex); // 繼續替換
+              }, delay);
+            }
+      
+            for (let i = 0; i < galleryImages.length; i++) {
+              scheduleNextReplacement(i); // 初始化替換流程
+            }
+          }
+      
+          startReplacingImages(); // 啟動替換流程
+        });
+      </script>
+      
 
 </body>
 

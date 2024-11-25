@@ -1079,11 +1079,15 @@ blockquote {
 /* --------- 6.4 Gallery ---------- */
 
 #gallery img {
-    max-height: 300px;
+    width: 100%; /* 填充父元素寬度 */
+    height: 100%; /* 填充父元素高度 */
+    object-fit: cover; /* 模擬 background-size: cover 的效果 */
 }
 
 #gallery [class*='col-'] {
-    padding: 0;
+    padding: 0;    
+    height: 200px;
+    background-color: #e3e3e3;
 }
 
 #gallery a {

@@ -1500,7 +1500,6 @@ blockquote {
     display: block;
     text-align: center;
     position: relative;
-    text-transform: uppercase;
     font-weight: bold;
     color: #fff;
 }

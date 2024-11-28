@@ -306,58 +306,168 @@
             <!--Project-->
             <section id="project" class="secondary-color scrollto clearfix">
                 <div class="row clearfix">
+                    <style>
+                        @media (min-width: 480px) and (max-width: 767px){                            
+                            .project-intro{
+                                width: 100%;
+                                height: 500px;
+                            }
+                        }@media (max-width: 480px){                    
+                            .project-intro{
+                                height: 750px;
+                            }
 
-                    <div class="col-3">
+                        }
+                    </style>
+                    <div class="col-3 project-intro">
 
                         <div class="section-heading">
-                            <h3>TRUST</h3>
-                            <h2 class="section-title">Companies who use our services</h2>
-                            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                            <h3> I am Yuu, an adherent of the art of gaming. Now that I am a Game Dev. I have ventured
+                                into this boundless realm of creativity, to forge my very own masterpiece!</h3>
+                            <h2 class="section-title">My Diamonds in the rough</h2>
+
+
+                            <style>
+                                .category-filter {
+                                    display: flow-root;
+                                    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+                                    font-size: 22px;
+                                    font-weight: 400;
+                                    color: #111;
+                                    padding: 0;
+                                    margin-bottom: 20px;
+                                }
+
+                                .category-filter h4 {
+                                    font-weight: bold;
+                                    padding-top: 0;
+                                }
+
+                                .category-checkbox {
+                                    text-align: center;
+                                    padding: 5px;
+                                    font-size: 20px;
+                                    cursor: pointer;
+
+                                }
+
+                                @media (max-width: 1200px) {
+                                    .category-checkbox {
+                                        font-size: 16px;
+                                    }
+                                }
+
+                                .category-checkbox input {
+                                    display: none;
+                                    height: 100%;
+                                }
+
+                                .category-checkbox div {
+                                    border: solid #111;
+                                    box-sizing: 1px;
+                                    border-radius: 5px;
+                                }
+
+                                .category-checkbox .fa-circle-check {
+                                    color: #a2a2a22f;
+                                }
+
+                                .category-checkbox .fa-circle-check.checked {
+                                    color: #29e78e;
+                                }
+                            </style>
+                            <div class="row category-filter" style="height: 150px;">
+                                <h4>Skill Type</h4>
+                                <label class="col-3 category-checkbox" for="checkbox-Game">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-Game" name="checkbox-Game"
+                                            value="checkbox-Game">
+                                        Game<br>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </label>
+                                <label class="col-3 category-checkbox" for="checkbox-3D">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-3D" name="checkbox-3D" value="checkbox-3D">
+                                        3D<br>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </label>
+                                <label class="col-3 category-checkbox" for="checkbox-Coding">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-Coding" name="checkbox-Coding"
+                                            value="checkbox-Coding">
+                                        Coding <br>
+                                        <i class="fa-solid fa-circle-check "></i>
+                                    </div>
+                                </label>
+                                <label class="col-3 category-checkbox" for="checkbox-3C">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-3C" name="checkbox-3C" value="checkbox-3C">
+                                        3C <br>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </label>
+                                <label class="col-3 category-checkbox" for="checkbox-AI">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-AI" name="checkbox-AI" value="checkbox-AI">
+                                        AI <br>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </label>
+                                <label class="col-3 category-checkbox" for="checkbox-Level">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-Level" name="checkbox-Level"
+                                            value="checkbox-Level">
+                                        Level <br>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </label>
+                                <label class="col-3 category-checkbox" for="checkbox-Cinematic">
+                                    <div>
+                                        <input type="checkbox" id="checkbox-Cinematic" name="checkbox-Cinematic"
+                                            value="checkbox-Cinematic">
+                                        Cinematic <br>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </label>
+                            </div>
                         </div>
 
                     </div>
+                    <style>
+                        .project-cell {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            /* 一行三等份 */
+                            gap: 1rem;
+                            /* 可選：設置子項間距 */
+                            padding: 0;
+                        }
 
-                    <div class="col-2-3">
+                        .project-cell {
+                            position: relative;
+                            aspect-ratio: 1 / 1;
+                            /* 保持 1:1 比例 */
+                            overflow: hidden;
+                        }
 
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo1.png" alt="Company" />
-                            <div class="client-overlay"><span>Tree</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo2.png" alt="Company" />
-                            <div class="client-overlay"><span>Fingerprint</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo3.png" alt="Company" />
-                            <div class="client-overlay"><span>The Man</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo4.png" alt="Company" />
-                            <div class="client-overlay"><span>Mustache</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo5.png" alt="Company" />
-                            <div class="client-overlay"><span>Goat</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo6.png" alt="Company" />
-                            <div class="client-overlay"><span>Justice</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo7.png" alt="Company" />
-                            <div class="client-overlay"><span>Ball</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo8.png" alt="Company" />
-                            <div class="client-overlay"><span>Cold</span></div>
-                        </a>
+                        .project-cell img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            /* 模擬背景圖覆蓋 */
+                            object-position: center;
+                        }
+                    </style>
 
-                        <a href="#" class="col-3">
-                            <img src="assets/images/company-images/company-logo9.png" alt="Company" />
-                            <div class="client-overlay"><span>Cold</span></div>
-                        </a>
-
+                    <div class="col-2-3 project-grid">
+                        <template id="project-template">
+                            <a href="#" target="_blank" class="col-3  project-cell">
+                                <img src="" alt="">
+                                <div class="client-overlay"><span></span></div>
+                            </a>
+                        </template>
                     </div>
 
                 </div>
@@ -574,105 +684,9 @@
     <script src="TemplateSet/Namari/js/lightbox.min.js"></script>
     <script src="TemplateSet/Namari/js/site.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const galleryElements = document.querySelectorAll("#gallery a img");
-            const minDelay = 10000; // 最小切換時間 (毫秒)
-            const maxDelay = 15000; // 最大切換時間 (毫秒)
 
-            const imagePaths = [
-                "Pages/Projects/HorrorAVGGame/asset/slide/0.jpg"
-                , "Pages/Projects/HorrorAVGGame/asset/slide/1.png"
-                , "Pages/Projects/HorrorAVGGame/asset/slide/2.png"
-                , "Pages/Projects/SubmarineLeverDesign/asset/slide/0.jpg"
-                , "Pages/Projects/SubmarineLeverDesign/asset/slide/1.png"
-                , "Pages/Projects/SubmarineLeverDesign/asset/slide/2.png"
-                , "Pages/Projects/SubmarineLeverDesign/asset/slide/3.png"
-                , "Pages/Projects/IslandAdventure/asset/slide/0.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/1.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/2.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/3.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/4.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/5.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/6.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/7.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/8.jpg"
-                , "Pages/Projects/IslandAdventure/asset/slide/9.jpg"
-            ];
-
-            // 用於記錄每個 imgElement 當前顯示的圖片路徑
-            const currentImages = new Map();
-
-            // 初始化圖片
-            function initializeImages() {
-                const shuffledImages = shuffleArray([...imagePaths]);
-                galleryElements.forEach((imgElement, index) => {
-                    const imagePath = shuffledImages[index];
-                    setImage(imgElement, imagePath);
-                    currentImages.set(imgElement, imagePath);
-                });
-            }
-
-            // 隨機打亂圖片數組
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
-            }
-
-            // 設置圖片路徑
-            function setImage(imgElement, imagePath) {
-                imgElement.src = imagePath;
-                imgElement.parentElement.href = imagePath;
-            }
-
-            // 獲取不與當前顯示圖片重複的圖片
-            function getUniqueImage(imgElement) {
-                const usedImages = Array.from(currentImages.values()); // 當前所有顯示的圖片
-                const availableImages = imagePaths.filter(path => !usedImages.includes(path)); // 剩餘可用圖片
-
-                // 如果沒有剩餘圖片，重置可用圖片列表
-                if (availableImages.length === 0) {
-                    const otherImages = imagePaths.filter(path => path !== currentImages.get(imgElement));
-                    return otherImages[Math.floor(Math.random() * otherImages.length)];
-                }
-
-                return availableImages[Math.floor(Math.random() * availableImages.length)];
-            }
-
-            // 動態切換圖片，帶淡入淡出效果
-            function startDynamicUpdates() {
-                galleryElements.forEach((imgElement) => {
-                    function replaceImage() {
-                        const delay = Math.random() * (maxDelay - minDelay) + minDelay; // 隨機延遲
-                        setTimeout(() => {
-                            // 獲取新的圖片路徑
-                            const newImage = getUniqueImage(imgElement);
-
-                            // 淡出動畫
-                            imgElement.classList.add("fade-out");
-
-                            setTimeout(() => {
-                                // 更新圖片路徑並淡入
-                                setImage(imgElement, newImage);
-                                currentImages.set(imgElement, newImage);
-                                imgElement.classList.remove("fade-out");
-                            }, 500); // 等待淡出動畫完成
-
-                            replaceImage(); // 遞歸執行
-                        }, delay);
-                    }
-                    replaceImage();
-                });
-            }
-
-            // 初始化並啟動動態更新
-            initializeImages();
-            startDynamicUpdates();
-        });
-    </script>
+    <script src="Data.js"></script>
+    <script src="MyJS.js"></script>
 
 
 

@@ -844,7 +844,7 @@ svg path {
     max-width: 95%;
     height: 600px;
     margin: 30px auto;
-    background-color: #efefef;
+    
     overflow: hidden
 }
 
@@ -870,7 +870,7 @@ svg path {
     right: 0;
     bottom: 0;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
     -webkit-transition: opacity .6s ease-in-out;
@@ -949,9 +949,7 @@ svg path {
     position: relative;
     width: 1440px;
     max-width: 95%;
-    height: 600px;
     margin: 30px auto;
-    background-color: #efefef;
     overflow: hidden
 }
 
@@ -1115,7 +1113,8 @@ svg path {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 40%;
-    opacity: 0
+    opacity: 0 ;   
+    border: 2px solid;
 }
 
 @media (max-width: 900px) {

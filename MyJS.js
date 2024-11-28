@@ -128,10 +128,10 @@ function updateProjects() {
         .filter(checkbox => checkbox.checked)
         .map(checkbox => checkbox.value.replace("checkbox-", ""));
 
-        selectedTags.forEach(element => {
-            
-console.log(element);
-        });
+    selectedTags.forEach(element => {
+
+        console.log(element);
+    });
     // 清空容器
     container.innerHTML = "";
 
@@ -153,7 +153,7 @@ console.log(element);
             const img = projectElement.querySelector("img");
             const span = projectElement.querySelector("span");
 
-            link.href = "#";
+            link.href = `Pages/Projects/${project.name}/page.html`;
             img.src = `Pages/Projects/${project.name}/asset/slide/0.jpg`;
             img.alt = project.name;
             span.textContent = project.name;

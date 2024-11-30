@@ -153,8 +153,8 @@ function updateProjects() {
             const img = projectElement.querySelector("img");
             const span = projectElement.querySelector("span");
 
-            link.href = `Pages/Projects/${project.name}/page.html`;
-            img.src = `Pages/Projects/${project.name}/asset/slide/0.jpg`;
+            link.href = `/Pages/Projects/${project.name}/page.html`;
+            img.src = `/Pages/Projects/${project.name}/asset/slide/0.jpg`;
             img.alt = project.name;
             span.textContent = project.name;
 

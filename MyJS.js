@@ -100,7 +100,11 @@ checkboxes.forEach((checkbox, index) => {
 
 
 // 獲取模板和容器
-const container = document.querySelector(".col-2-3.project-grid");
+const img = document.querySelector("img");
+img.ondragstart = function() { return false; };
+
+
+const projectGridContainer = document.querySelector(".col-2-3.project-grid");
 const template = document.getElementById("project-template");
 
 // // 遍歷 JSON 數據並生成內容
@@ -119,7 +123,7 @@ const template = document.getElementById("project-template");
 //     span.textContent = project.name;
 
 //     // 將生成的內容添加到容器
-//     container.appendChild(projectElement);
+//     projectGridContainer.appendChild(projectElement);
 // });
 // 更新項目顯示
 function updateProjects() {
@@ -133,7 +137,7 @@ function updateProjects() {
         console.log(element);
     });
     // 清空容器
-    container.innerHTML = "";
+    projectGridContainer.innerHTML = "";
 
     // 遍歷 JSON 數據，篩選匹配項目
     projectsJson
@@ -159,7 +163,7 @@ function updateProjects() {
             span.textContent = project.name;
 
             // 將生成的內容添加到容器
-            container.appendChild(projectElement);
+            projectGridContainer.appendChild(projectElement);
         });
 }
 
@@ -169,3 +173,76 @@ checkboxes.forEach(checkbox => {
 });
 // 初始化顯示
 updateProjects();
+
+
+
+
+
+
+
+
+    const wrapper = document.querySelector('.horizontal-scroll-wrapper');
+    const externalContainer = document.querySelector('.external');
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let minTranslate, maxTranslate;
+
+    // 初始化邊界
+    function updateBounds() {
+        const wrapperWidth = wrapper.offsetWidth;
+        const externalContainerWidth = externalContainer.offsetWidth;
+        minTranslate = Math.min(0, externalContainerWidth - wrapperWidth); // 最小值，通常為負值
+        maxTranslate = 0; // 最大值（不超過左邊界）
+    }
+
+    // 更新位置並限制邊界
+    function setTranslate(delta) {
+        currentTranslate = prevTranslate + delta;
+        currentTranslate = Math.max(minTranslate, Math.min(currentTranslate, maxTranslate)); // 限制範圍
+        wrapper.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    // 監聽滑鼠事件
+    wrapper.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        wrapper.style.cursor = 'grabbing';
+        if (window.getSelection) {window.getSelection().removeAllRanges();}
+        else if (document.selection) {document.selection.empty();}
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        prevTranslate = currentTranslate;
+        wrapper.style.cursor = 'default';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const delta = e.clientX - startX;
+        setTranslate(delta);
+    });
+
+    // 監聽觸控事件
+    wrapper.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+    });
+
+    wrapper.addEventListener('touchend', () => {
+        isDragging = false;
+        prevTranslate = currentTranslate;
+    });
+
+    wrapper.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const delta = e.touches[0].clientX - startX;
+        setTranslate(delta);
+    });
+
+    // 初始化
+    window.addEventListener('resize', updateBounds);
+    updateBounds(); // 頁面加載時更新邊界

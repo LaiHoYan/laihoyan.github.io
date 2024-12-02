@@ -123,14 +123,14 @@
                         <nav id="nav-main">
                             <ul>
                                 <li>
-                                    <a href="#about">About Me</a>
+                                    <a href="#banner">About Me</a>
                                 </li>
                                 <li>
                                     <a href="#gallery">Showcases</a>
                                 </li>
-                                <!-- <li>
-                                    <a href="#services">My Career</a>
-                                </li> -->
+                                <li>
+                                    <a href="#career">My Career</a>
+                                </li>
                             </ul>
                         </nav>
                         <!--End of Main Navigation-->
@@ -478,6 +478,282 @@
             </section>
             <!--End of Project-->
 
+            <style>
+                .external {
+                    height: fit-content;
+                    padding: 75px 0;
+                    user-select: none;
+                    -moz-user-select: none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    -o-user-select: none;
+                }
+
+                .external .horizontal-scroll-wrapper {
+                    padding: 100px 0;
+                    height: fit-content;
+                    width: fit-content;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    perspective: 1px;
+                    transform-style: preserve-3d;
+                }
+
+
+                .external .img-wrapper {
+                    width: 300px;
+                    margin: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 40vh;
+                    transform-origin: 50% 50%;
+
+                    transition: 1s;
+                }
+
+                .external .school {
+                    transform: translateY(5vh);
+                }
+
+                .external .job {
+                    transform: translateY(-5vh);
+                }
+
+                .external .scroll-info,
+                .external header {
+                    position: absolute;
+                    left: 1rem;
+                }
+
+
+                .external header {
+                    bottom: 1rem;
+                }
+
+                .external .scroll-info {
+                    top: 1rem;
+                }
+
+                .external h1 {
+                    font-weight: 300;
+                    font-size: 1rem;
+                }
+
+                .external img {
+                    width: 100%;
+                    height: 100%;
+                    transition: .5s;
+                    vertical-align: top;
+                    filter: saturate(40%) sepia(30%) hue-rotate(5deg);
+                    pointer-events: none
+                }
+
+
+                .external p {
+                    margin: 0;
+                }
+
+                .external .scroll-info {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .external .icon svg {
+                    width: 50px;
+                    fill: currentcolor;
+                }
+
+                /**/
+            </style>
+
+
+
+
+
+
+
+
+            <section id="career" class=" text-center scrollto clearfix ">
+
+                <!--Career-->
+                <div class="row clearfix">
+                    <div class="external" id="scroll-container">
+                        <div class="row clearfix">
+                            <div class="section-heading" style="margin: auto;width: 50%;">
+                                <h3 style="color: #b5b5b5;">My past is not a memory. It's a force at my back. It pushes
+                                    and steers. I may not always like where it leads me, but like any story, the past
+                                    needs resolution. What's past is prologue.</h3>
+                                <h2 class="section-title">My Journey</h2>
+                            </div>
+                        </div>
+                        <div class="horizontal-scroll-wrapper" id="scroll-content">
+
+                            <div class="img-wrapper school">
+                                <!--Pricing Block-->
+                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="pricing-block-content">
+                                        <h3>Personal</h3>
+                                        <p class="pricing-sub">The standard version</p>
+                                        <div class="pricing">
+                                            <div class="price"><span>$</span>19</div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        </div>
+                                        <ul>
+                                            <li>5 Downloads</li>
+                                            <li>2 Extensions</li>
+                                            <li>Tutorials</li>
+                                            <li>Forum Support</li>
+                                            <li>1 year free updates</li>
+                                        </ul>
+                                        <a href="#" class="button">BUY TODAY</a>
+                                    </div>
+                                </div>
+                                <!--End Pricing Block-->
+                            </div>
+                            <div class="img-wrapper job featured">
+                                <!--Pricing Block-->
+                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="pricing-block-content">
+                                        <h3>Personal</h3>
+                                        <p class="pricing-sub">The standard version</p>
+                                        <div class="pricing">
+                                            <div class="price"><span>$</span>19</div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        </div>
+                                        <ul>
+                                            <li>5 Downloads</li>
+                                            <li>2 Extensions</li>
+                                            <li>Tutorials</li>
+                                            <li>Forum Support</li>
+                                            <li>1 year free updates</li>
+                                        </ul>
+                                        <a href="#" class="button">BUY TODAY</a>
+                                    </div>
+                                </div>
+                                <!--End Pricing Block-->
+                            </div>
+
+
+                            <div class="img-wrapper school">
+                                <!--Pricing Block-->
+                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="pricing-block-content">
+                                        <h3>Personal</h3>
+                                        <p class="pricing-sub">The standard version</p>
+                                        <div class="pricing">
+                                            <div class="price"><span>$</span>19</div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        </div>
+                                        <ul>
+                                            <li>5 Downloads</li>
+                                            <li>2 Extensions</li>
+                                            <li>Tutorials</li>
+                                            <li>Forum Support</li>
+                                            <li>1 year free updates</li>
+                                        </ul>
+                                        <a href="#" class="button">BUY TODAY</a>
+                                    </div>
+                                </div>
+                                <!--End Pricing Block-->
+                            </div>
+
+                            <div class="img-wrapper job featured">
+                                <!--Pricing Block-->
+                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="pricing-block-content">
+                                        <h3>Personal</h3>
+                                        <p class="pricing-sub">The standard version</p>
+                                        <div class="pricing">
+                                            <div class="price"><span>$</span>19</div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        </div>
+                                        <ul>
+                                            <li>5 Downloads</li>
+                                            <li>2 Extensions</li>
+                                            <li>Tutorials</li>
+                                            <li>Forum Support</li>
+                                            <li>1 year free updates</li>
+                                        </ul>
+                                        <a href="#" class="button">BUY TODAY</a>
+                                    </div>
+                                </div>
+                                <!--End Pricing Block-->
+
+                            </div>
+                            <div class="img-wrapper job featured" >
+                                <!--Pricing Block-->
+                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="pricing-block-content">
+                                        <h3>Personal</h3>
+                                        <p class="pricing-sub">The standard version</p>
+                                        <div class="pricing">
+                                            <div class="price"><span>$</span>19</div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        </div>
+                                        <ul>
+                                            <li>5 Downloads</li>
+                                            <li>2 Extensions</li>
+                                            <li>Tutorials</li>
+                                            <li>Forum Support</li>
+                                            <li>1 year free updates</li>
+                                        </ul>
+                                        <a href="#" class="button">BUY TODAY</a>
+                                    </div>
+                                </div>
+                                <!--End Pricing Block-->
+
+                            </div>
+
+                            <div class="img-wrapper job featured">
+                                <!--Pricing Block-->
+                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="pricing-block-content">
+                                        <h3>Personal</h3>
+                                        <p class="pricing-sub">The standard version</p>
+                                        <div class="pricing">
+                                            <div class="price"><span>$</span>19</div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        </div>
+                                        <ul>
+                                            <li>5 Downloads</li>
+                                            <li>2 Extensions</li>
+                                            <li>Tutorials</li>
+                                            <li>Forum Support</li>
+                                            <li>1 year free updates</li>
+                                        </ul>
+                                        <a href="#" class="button">BUY TODAY</a>
+                                    </div>
+                                </div>
+                                <!--End Pricing Block-->
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </section>
+            <!--End of Pricing Tables-->
+
+
+
+
+
+
+
+
 
 
 
@@ -541,6 +817,9 @@
 
                 </div>
                 <!--End of Content Section-->
+
+
+
 
                 <!--Career-->
                 <section id="career" class=" text-center scrollto clearfix ">
@@ -617,6 +896,15 @@
                     </div>
                 </section>
                 <!--End of Pricing Tables-->
+
+
+
+
+
+
+
+
+
 
                 <!--Testimonials ?????????-->
                 <aside id="testimonials" class=" scrollto text-center" data-enllax-ratio=".2">

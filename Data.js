@@ -15,8 +15,8 @@ const imagePaths = [
     , "Pages/Projects/CrashingSurvival/asset/slide/2.jpg"    
     
     , "Pages/Projects/HorrorAVGGame/asset/slide/0.jpg"
-    , "Pages/Projects/HorrorAVGGame/asset/slide/1.png"
-    , "Pages/Projects/HorrorAVGGame/asset/slide/2.png"
+    , "Pages/Projects/HorrorAVGGame/asset/slide/1.jpg"
+    , "Pages/Projects/HorrorAVGGame/asset/slide/2.jpg"
 
     , "Pages/Projects/IslandAdventure/asset/slide/0.jpg"
     , "Pages/Projects/IslandAdventure/asset/slide/1.jpg"

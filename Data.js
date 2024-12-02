@@ -30,9 +30,9 @@ const imagePaths = [
     , "Pages/Projects/IslandAdventure/asset/slide/9.jpg"
 
     , "Pages/Projects/SubmarineLeverDesign/asset/slide/0.jpg"
-    , "Pages/Projects/SubmarineLeverDesign/asset/slide/1.png"
-    , "Pages/Projects/SubmarineLeverDesign/asset/slide/2.png"
-    , "Pages/Projects/SubmarineLeverDesign/asset/slide/3.png"
+    , "Pages/Projects/SubmarineLeverDesign/asset/slide/1.jpg"
+    , "Pages/Projects/SubmarineLeverDesign/asset/slide/2.jpg"
+    , "Pages/Projects/SubmarineLeverDesign/asset/slide/3.jpg"
     
     , "Pages/Projects/TouhouShooter/asset/slide/0.jpg"
     , "Pages/Projects/TouhouShooter/asset/slide/1.jpg"

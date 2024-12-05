@@ -1,4 +1,7 @@
-
+//gallery
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
     const galleryElements = document.querySelectorAll("#gallery a img");
     const minDelay = 10000; // 最小切換時間 (毫秒)
@@ -79,6 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
     startDynamicUpdates();
 });
 
+
+//projects
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//projects-checkbox
+//////////////////////
+//////////////////////
+
 // 選取所有的 checkbox 和相應的 label
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const labels = document.querySelectorAll('.category-checkbox .fa-circle-check');
@@ -98,10 +111,13 @@ checkboxes.forEach((checkbox, index) => {
 });
 
 
+//projects-projectGrid
+//////////////////////
+//////////////////////
 
 // 獲取模板和容器
 const img = document.querySelector("img");
-img.ondragstart = function() { return false; };
+img.ondragstart = function () { return false; };
 
 
 const projectGridContainer = document.querySelector(".col-2-3.project-grid");
@@ -180,69 +196,123 @@ updateProjects();
 
 
 
+//journey card
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    const wrapper = document.querySelector('.horizontal-scroll-wrapper');
-    const externalContainer = document.querySelector('.external');
-    let isDragging = false;
-    let startX = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let minTranslate, maxTranslate;
+// 獲取 template 和 container
+const journeytemplate = document.getElementById("jCard-tamplate").content;
+const journeycontainer = document.getElementById("scroll-content");
 
-    // 初始化邊界
-    function updateBounds() {
-        const wrapperWidth = wrapper.offsetWidth;
-        const externalContainerWidth = externalContainer.offsetWidth;
-        minTranslate = Math.min(0, externalContainerWidth - wrapperWidth); // 最小值，通常為負值
-        maxTranslate = 0; // 最大值（不超過左邊界）
+// 遍歷 JSON 數據
+journeyData.forEach(item => {
+    // 複製 template
+    const clone = document.importNode(journeytemplate, true);
+
+    // 填充資料
+    clone.querySelector("#jCard-title").textContent = item.title;
+    clone.querySelector("#jCard-type").textContent = item.isJob ? "Work Experience" : "Education";
+    clone.querySelector("#jCard-box-title").textContent = item.boxTitle;
+    clone.querySelector("#jCard-box-name").textContent = item.isJob ? "" : item.boxName;
+    clone.querySelector("#jCard-box-location").textContent = item.boxLocation;
+    clone.querySelector("#jCard-box-date").textContent = item.boxDate;
+
+    // 動態新增 class
+    const jCardElement = clone.querySelector("#jCard");
+
+    if (item.isJob) {
+        jCardElement.classList.add("featured");
+    } else {
+        jCardElement.classList.add("school");
     }
 
-    // 更新位置並限制邊界
-    function setTranslate(delta) {
-        currentTranslate = prevTranslate + delta;
-        currentTranslate = Math.max(minTranslate, Math.min(currentTranslate, maxTranslate)); // 限制範圍
-        wrapper.style.transform = `translateX(${currentTranslate}px)`;
-    }
-
-    // 監聽滑鼠事件
-    wrapper.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        wrapper.style.cursor = 'grabbing';
-        if (window.getSelection) {window.getSelection().removeAllRanges();}
-        else if (document.selection) {document.selection.empty();}
+    // 動態生成 <li>
+    const ulElement = clone.querySelector("ul");
+    item.keys.forEach(key => {
+        const li = document.createElement("li");
+        li.textContent = key;
+        ulElement.appendChild(li);
     });
 
-    document.addEventListener('mouseup', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        prevTranslate = currentTranslate;
-        wrapper.style.cursor = 'default';
-    });
+    // 將完成的 template 添加到 container
+    journeycontainer.appendChild(clone);
+});
 
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const delta = e.clientX - startX;
-        setTranslate(delta);
-    });
 
-    // 監聽觸控事件
-    wrapper.addEventListener('touchstart', (e) => {
-        isDragging = true;
-        startX = e.touches[0].clientX;
-    });
 
-    wrapper.addEventListener('touchend', () => {
-        isDragging = false;
-        prevTranslate = currentTranslate;
-    });
 
-    wrapper.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        const delta = e.touches[0].clientX - startX;
-        setTranslate(delta);
-    });
 
-    // 初始化
-    window.addEventListener('resize', updateBounds);
-    updateBounds(); // 頁面加載時更新邊界
+//journey scroll
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const wrapper = document.querySelector('.horizontal-scroll-wrapper');
+const externalContainer = document.querySelector('.external');
+let isDragging = false;
+let startX = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let minTranslate, maxTranslate;
+
+// 初始化邊界
+function updateBounds() {
+    wrapperWidth = wrapper.offsetWidth;
+    externalContainerWidth = externalContainer.offsetWidth;
+    minTranslate = Math.min(0, externalContainerWidth - wrapperWidth); // 最小值，通常為負值
+    maxTranslate = 0; // 最大值（不超過左邊界）
+}
+
+// 更新位置並限制邊界
+function setTranslate(delta) {
+    currentTranslate = prevTranslate + delta;
+    currentTranslate = Math.max(minTranslate, Math.min(currentTranslate, maxTranslate)); // 限制範圍
+    wrapper.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+// 監聽滑鼠事件
+wrapper.addEventListener('mousedown', (e) => {
+    console.log("mousedown");
+    isDragging = true;
+    startX = e.clientX;
+    wrapper.style.cursor = 'grabbing';
+    if (window.getSelection) { window.getSelection().removeAllRanges(); }
+    else if (document.selection) { document.selection.empty(); }
+});
+
+document.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    prevTranslate = currentTranslate;
+    wrapper.style.cursor = 'default';
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const delta = e.clientX - startX;
+    console.log("mousemove" + delta);
+    setTranslate(delta);
+});
+
+// 監聽觸控事件
+wrapper.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+});
+
+wrapper.addEventListener('touchend', () => {
+    isDragging = false;
+    prevTranslate = currentTranslate;
+});
+
+wrapper.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const delta = e.touches[0].clientX - startX;
+    setTranslate(delta);
+});
+
+// 初始化
+window.addEventListener('resize', updateBounds);
+updateBounds(); // 頁面加載時更新邊界

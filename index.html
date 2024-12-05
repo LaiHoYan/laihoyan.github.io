@@ -481,17 +481,13 @@
             <style>
                 .external {
                     height: fit-content;
-                    padding: 75px 0;
                 }
 
                 .external .horizontal-scroll-wrapper {
-                    padding: 100px 0;
                     height: fit-content;
                     width: fit-content;
                     display: flex;
                     flex-direction: row;
-                    align-items: center;
-                    perspective: 1px;
                     transform-style: preserve-3d;
                 }
 
@@ -500,7 +496,6 @@
                     width: 300px;
                     margin: 25px;
                     display: flex;
-                    align-items: center;
                     justify-content: center;
                     min-height: 40vh;
                     transform-origin: 50% 50%;
@@ -509,11 +504,7 @@
                 }
 
                 .external .school {
-                    transform: translateY(5vh);
-                }
-
-                .external .job {
-                    transform: translateY(-5vh);
+                    margin-top: 10vh;
                 }
 
                 .external .scroll-info,
@@ -575,157 +566,56 @@
                 <!--Career-->
                 <div class="row clearfix">
                     <div class="external" id="scroll-container">
-                        <div class="row clearfix">
+                        <div class="row clearfix" style="padding-bottom: 0;">
                             <div class="section-heading" style="margin: auto;width: 50%;">
                                 <h3 style="color: #b5b5b5;">My past is not a memory. It's a force at my back. It pushes
                                     and steers. I may not always like where it leads me, but like any story, the past
                                     needs resolution. What's past is prologue.</h3>
                                 <h2 class="section-title">My Journey</h2>
+                                <img src="assets/images/recent.png" alt="" style=" height: 50px;
+                                object-fit: contain;
+                                object-position: center center;
+                                filter:none;">
                             </div>
                         </div>
                         <div class="horizontal-scroll-wrapper" id="scroll-content">
 
-                            <div class="img-wrapper school">
+
+                            <template id="jCard-tamplate">
                                 <!--Pricing Block-->
-                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="pricing-block-content">
-                                        <h3>Personal</h3>
-                                        <p class="pricing-sub">The standard version</p>
-                                        <div class="pricing">
-                                            <div class="price"><span>$</span>19</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <div id="jCard" class="img-wrapper">
+                                    <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s" style="width: 100%;">
+                                        <div class="pricing-block-content">
+                                            <h3 id="jCard-title">jCard-title</h3>
+                                            <p id="jCard-type" class="pricing-sub">jCard-type</p>
+                                            <div class="pricing">
+                                                <div id="jCard-box" class="price">
+                                                    <span id="jCard-box-title">jCard-box-title</span><br><br>
+                                                    <span id="jCard-box-name">jCard-box-name</span><br>
+                                                    <span id="jCard-box-location">jCard-box-location</span>
+                                                </div>
+                                                <p id="jCard-box-date">jCard-box-date</p>
+                                            </div>
+
+                                            <ul>
+                                                <li>
+                                                    <h3>Keys</h3>
+                                                </li>
+                                            </ul>
+
                                         </div>
-                                        <ul>
-                                            <li>5 Downloads</li>
-                                            <li>2 Extensions</li>
-                                            <li>Tutorials</li>
-                                            <li>Forum Support</li>
-                                            <li>1 year free updates</li>
-                                        </ul>
-                                        <a href="#" class="button">BUY TODAY</a>
                                     </div>
                                 </div>
                                 <!--End Pricing Block-->
-                            </div>
-                            <div class="img-wrapper job featured">
-                                <!--Pricing Block-->
-                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="pricing-block-content">
-                                        <h3>Personal</h3>
-                                        <p class="pricing-sub">The standard version</p>
-                                        <div class="pricing">
-                                            <div class="price"><span>$</span>19</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                        </div>
-                                        <ul>
-                                            <li>5 Downloads</li>
-                                            <li>2 Extensions</li>
-                                            <li>Tutorials</li>
-                                            <li>Forum Support</li>
-                                            <li>1 year free updates</li>
-                                        </ul>
-                                        <a href="#" class="button">BUY TODAY</a>
-                                    </div>
-                                </div>
-                                <!--End Pricing Block-->
-                            </div>
+                            </template>
 
 
-                            <div class="img-wrapper school">
-                                <!--Pricing Block-->
-                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="pricing-block-content">
-                                        <h3>Personal</h3>
-                                        <p class="pricing-sub">The standard version</p>
-                                        <div class="pricing">
-                                            <div class="price"><span>$</span>19</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                        </div>
-                                        <ul>
-                                            <li>5 Downloads</li>
-                                            <li>2 Extensions</li>
-                                            <li>Tutorials</li>
-                                            <li>Forum Support</li>
-                                            <li>1 year free updates</li>
-                                        </ul>
-                                        <a href="#" class="button">BUY TODAY</a>
-                                    </div>
-                                </div>
-                                <!--End Pricing Block-->
-                            </div>
 
-                            <div class="img-wrapper job featured">
-                                <!--Pricing Block-->
-                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="pricing-block-content">
-                                        <h3>Personal</h3>
-                                        <p class="pricing-sub">The standard version</p>
-                                        <div class="pricing">
-                                            <div class="price"><span>$</span>19</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                        </div>
-                                        <ul>
-                                            <li>5 Downloads</li>
-                                            <li>2 Extensions</li>
-                                            <li>Tutorials</li>
-                                            <li>Forum Support</li>
-                                            <li>1 year free updates</li>
-                                        </ul>
-                                        <a href="#" class="button">BUY TODAY</a>
-                                    </div>
-                                </div>
-                                <!--End Pricing Block-->
 
-                            </div>
-                            <div class="img-wrapper job featured" >
-                                <!--Pricing Block-->
-                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="pricing-block-content">
-                                        <h3>Personal</h3>
-                                        <p class="pricing-sub">The standard version</p>
-                                        <div class="pricing">
-                                            <div class="price"><span>$</span>19</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                        </div>
-                                        <ul>
-                                            <li>5 Downloads</li>
-                                            <li>2 Extensions</li>
-                                            <li>Tutorials</li>
-                                            <li>Forum Support</li>
-                                            <li>1 year free updates</li>
-                                        </ul>
-                                        <a href="#" class="button">BUY TODAY</a>
-                                    </div>
-                                </div>
-                                <!--End Pricing Block-->
 
-                            </div>
-
-                            <div class="img-wrapper job featured">
-                                <!--Pricing Block-->
-                                <div class=" pricing-block wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="pricing-block-content">
-                                        <h3>Personal</h3>
-                                        <p class="pricing-sub">The standard version</p>
-                                        <div class="pricing">
-                                            <div class="price"><span>$</span>19</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                        </div>
-                                        <ul>
-                                            <li>5 Downloads</li>
-                                            <li>2 Extensions</li>
-                                            <li>Tutorials</li>
-                                            <li>Forum Support</li>
-                                            <li>1 year free updates</li>
-                                        </ul>
-                                        <a href="#" class="button">BUY TODAY</a>
-                                    </div>
-                                </div>
-                                <!--End Pricing Block-->
-
-                            </div>
                         </div>
                     </div>
+                </div>
 
 
 
@@ -737,231 +627,230 @@
 
 
 
+
+    </div>
+    </section>
+    <!--End of Pricing Tables-->
+
+
+
+
+
+
+
+
+
+
+
+    <template>
+        <!--Content Section ???????????-->
+        <div id="services" class=" scrollto clearfix">
+
+            <div class="row no-padding-bottom clearfix">
+
+
+                <!--Content Left Side-->
+                <div class="col-3">
+                    <!--User Testimonial-->
+                    <blockquote class="testimonial text-right bigtest">
+                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua</q>
+                        <footer>— John Doe, Happy Customer</footer>
+                    </blockquote>
+                    <!-- End of Testimonial-->
 
                 </div>
-            </section>
-            <!--End of Pricing Tables-->
+                <!--End Content Left Side-->
 
-
-
-
-
-
-
-
-
-
-
-            <template>
-                <!--Content Section ???????????-->
-                <div id="services" class=" scrollto clearfix">
-
-                    <div class="row no-padding-bottom clearfix">
-
-
-                        <!--Content Left Side-->
-                        <div class="col-3">
-                            <!--User Testimonial-->
-                            <blockquote class="testimonial text-right bigtest">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut
-                                    labore
-                                    et dolore magna aliqua</q>
-                                <footer>— John Doe, Happy Customer</footer>
-                            </blockquote>
-                            <!-- End of Testimonial-->
-
-                        </div>
-                        <!--End Content Left Side-->
-
-                        <!--Content of the Right Side-->
-                        <div class="col-3">
-                            <div class="section-heading">
-                                <h3>BELIEVING</h3>
-                                <h2 class="section-title">Focusing On What Matters Most</h2>
-                                <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!
-                                </p>
-                            </div>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                architecto beatae vitae dicta sunt explicabo.
-                            </p>
-                            <p>
-                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                                quisquam
-                                est, qui dolorem ipsum quia dolor sit amet!
-                            </p>
-                            <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
-                            <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube"
-                                class="button video link-lightbox">
-                                WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <!--End Content Right Side-->
-
-                        <div class="col-3">
-                            <img src="assets/images/dancer.png" alt="Dancer" />
-                        </div>
-
+                <!--Content of the Right Side-->
+                <div class="col-3">
+                    <div class="section-heading">
+                        <h3>BELIEVING</h3>
+                        <h2 class="section-title">Focusing On What Matters Most</h2>
+                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!
+                        </p>
                     </div>
-
-
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                    <p>
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                        quisquam
+                        est, qui dolorem ipsum quia dolor sit amet!
+                    </p>
+                    <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+                    <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
+                        WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <!--End of Content Section-->
+                <!--End Content Right Side-->
 
-
-
-
-                <!--Career-->
-                <section id="career" class=" text-center scrollto clearfix ">
-                    <div class="row clearfix">
-
-                        <div class="section-heading">
-                            <h3>YOUR CHOICE</h3>
-                            <h2 class="section-title">We have the right package for you</h2>
-                        </div>
-
-                        <!--Pricing Block-->
-                        <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="pricing-block-content">
-                                <h3>Personal</h3>
-                                <p class="pricing-sub">The standard version</p>
-                                <div class="pricing">
-                                    <div class="price"><span>$</span>19</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                </div>
-                                <ul>
-                                    <li>5 Downloads</li>
-                                    <li>2 Extensions</li>
-                                    <li>Tutorials</li>
-                                    <li>Forum Support</li>
-                                    <li>1 year free updates</li>
-                                </ul>
-                                <a href="#" class="button">BUY TODAY</a>
-                            </div>
-                        </div>
-                        <!--End Pricing Block-->
-
-                        <!--Pricing Block-->
-                        <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="pricing-block-content">
-                                <h3>Student</h3>
-                                <p class="pricing-sub">Most popular choice</p>
-                                <div class="pricing">
-                                    <div class="price"><span>$</span>29</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                </div>
-                                <ul>
-                                    <li>15 Downloads</li>
-                                    <li>5 Extensions</li>
-                                    <li>Tutorials with Files</li>
-                                    <li>Forum Support</li>
-                                    <li>2 years free updates</li>
-                                </ul>
-                                <a href="#" class="button">BUY TODAY</a>
-                            </div>
-                        </div>
-                        <!--End Pricing Block-->
-
-                        <!--Pricing Block-->
-                        <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="pricing-block-content">
-                                <h3>Business</h3>
-                                <p class="pricing-sub">For the whole team</p>
-                                <div class="pricing">
-                                    <div class="price"><span>$</span>49</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                </div>
-                                <ul>
-                                    <li>Unlimited Downloads</li>
-                                    <li>Unlimited Extensions</li>
-                                    <li>HD Video Tutorials</li>
-                                    <li>Chat Support</li>
-                                    <li>Lifetime free updates</li>
-                                </ul>
-                                <a href="#" class="button">BUY TODAY</a>
-                            </div>
-                        </div>
-                        <!--End Pricing Block-->
-
-                    </div>
-                </section>
-                <!--End of Pricing Tables-->
-
-
-
-
-
-
-
-
-
-
-                <!--Testimonials ?????????-->
-                <aside id="testimonials" class=" scrollto text-center" data-enllax-ratio=".2">
-
-                    <div class="row clearfix">
-
-                        <div class="section-heading">
-                            <h3>FEEDBACK</h3>
-                            <h2 class="section-title">What our customers are saying</h2>
-                        </div>
-
-                        <!--User Testimonial-->
-                        <blockquote class="col-3 testimonial classic">
-                            <img src="assets/images/user-images/SugerDog.png" alt="User" />
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore
-                                et dolore magna aliqua</q>
-                            <footer>John Doe - Happy Customer</footer>
-                        </blockquote>
-                        <!-- End of Testimonial-->
-
-                        <!--User Testimonial-->
-                        <blockquote class="col-3 testimonial classic">
-                            <img src="assets/images/user-images/SugerDog.png" alt="User" />
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore
-                                et dolore magna aliqua</q>
-                            <footer>Roslyn Doe - Happy Customer</footer>
-                        </blockquote>
-                        <!-- End of Testimonial-->
-
-                        <!--User Testimonial-->
-                        <blockquote class="col-3 testimonial classic">
-                            <img src="assets/images/user-images/SugerDog.png" alt="User" />
-                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore
-                                et dolore magna aliqua</q>
-                            <footer>Thomas Doe - Happy Customer</footer>
-                        </blockquote>
-                        <!-- End of Testimonial-->
-
-                    </div>
-
-                </aside>
-                <!--End of Testimonials-->
-            </template>
-        </main>
-        <!--End Main Content Area-->
-
-
-        <!--Footer-->
-        <footer id="landing-footer" class="secondary-color clearfix">
-            <div class="row clearfix">
-
-                <p id="copyright" class="col-2">This page is host by <a href="https://github.com/">Github</a></p>
+                <div class="col-3">
+                    <img src="assets/images/dancer.png" alt="Dancer" />
+                </div>
 
             </div>
-        </footer>
-        <!--End of Footer-->
+
+
+        </div>
+        <!--End of Content Section-->
+
+
+
+
+        <!--Career-->
+        <section id="career" class=" text-center scrollto clearfix ">
+            <div class="row clearfix">
+
+                <div class="section-heading">
+                    <h3>YOUR CHOICE</h3>
+                    <h2 class="section-title">We have the right package for you</h2>
+                </div>
+
+                <!--Pricing Block-->
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="pricing-block-content">
+                        <h3>Personal</h3>
+                        <p class="pricing-sub">The standard version</p>
+                        <div class="pricing">
+                            <div class="price"><span>$</span>19</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                        <ul>
+                            <li>5 Downloads</li>
+                            <li>2 Extensions</li>
+                            <li>Tutorials</li>
+                            <li>Forum Support</li>
+                            <li>1 year free updates</li>
+                        </ul>
+                        <a href="#" class="button">BUY TODAY</a>
+                    </div>
+                </div>
+                <!--End Pricing Block-->
+
+                <!--Pricing Block-->
+                <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="pricing-block-content">
+                        <h3>Student</h3>
+                        <p class="pricing-sub">Most popular choice</p>
+                        <div class="pricing">
+                            <div class="price"><span>$</span>29</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                        <ul>
+                            <li>15 Downloads</li>
+                            <li>5 Extensions</li>
+                            <li>Tutorials with Files</li>
+                            <li>Forum Support</li>
+                            <li>2 years free updates</li>
+                        </ul>
+                        <a href="#" class="button">BUY TODAY</a>
+                    </div>
+                </div>
+                <!--End Pricing Block-->
+
+                <!--Pricing Block-->
+                <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="pricing-block-content">
+                        <h3>Business</h3>
+                        <p class="pricing-sub">For the whole team</p>
+                        <div class="pricing">
+                            <div class="price"><span>$</span>49</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        </div>
+                        <ul>
+                            <li>Unlimited Downloads</li>
+                            <li>Unlimited Extensions</li>
+                            <li>HD Video Tutorials</li>
+                            <li>Chat Support</li>
+                            <li>Lifetime free updates</li>
+                        </ul>
+                        <a href="#" class="button">BUY TODAY</a>
+                    </div>
+                </div>
+                <!--End Pricing Block-->
+
+            </div>
+        </section>
+        <!--End of Pricing Tables-->
+
+
+
+
+
+
+
+
+
+
+        <!--Testimonials ?????????-->
+        <aside id="testimonials" class=" scrollto text-center" data-enllax-ratio=".2">
+
+            <div class="row clearfix">
+
+                <div class="section-heading">
+                    <h3>FEEDBACK</h3>
+                    <h2 class="section-title">What our customers are saying</h2>
+                </div>
+
+                <!--User Testimonial-->
+                <blockquote class="col-3 testimonial classic">
+                    <img src="assets/images/user-images/SugerDog.png" alt="User" />
+                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore
+                        et dolore magna aliqua</q>
+                    <footer>John Doe - Happy Customer</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+                <!--User Testimonial-->
+                <blockquote class="col-3 testimonial classic">
+                    <img src="assets/images/user-images/SugerDog.png" alt="User" />
+                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore
+                        et dolore magna aliqua</q>
+                    <footer>Roslyn Doe - Happy Customer</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+                <!--User Testimonial-->
+                <blockquote class="col-3 testimonial classic">
+                    <img src="assets/images/user-images/SugerDog.png" alt="User" />
+                    <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore
+                        et dolore magna aliqua</q>
+                    <footer>Thomas Doe - Happy Customer</footer>
+                </blockquote>
+                <!-- End of Testimonial-->
+
+            </div>
+
+        </aside>
+        <!--End of Testimonials-->
+    </template>
+    </main>
+    <!--End Main Content Area-->
+
+
+    <!--Footer-->
+    <footer id="landing-footer" class="secondary-color clearfix">
+        <div class="row clearfix">
+
+            <p id="copyright" class="col-2">This page is host by <a href="https://github.com/">Github</a></p>
+
+        </div>
+    </footer>
+    <!--End of Footer-->
 
     </div>
 

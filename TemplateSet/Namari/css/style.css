@@ -34,7 +34,7 @@
 
 /*------------------------------------------------------------------------------------------*/
 ::selection {
-    background: #c1f4da;
+    background: #bbf5d6;
 }
 
 *,
@@ -422,7 +422,8 @@ section {
 }
 
 .nav-solid #logo #navigation-logo {
-    display: inline-block;    line-height: 71px;
+    display: inline-block;
+    line-height: 71px;
 
 }
 
@@ -1072,20 +1073,23 @@ blockquote {
 }
 
 .testimonial.bigtest q {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 
 /* --------- 6.4 Gallery ---------- */
 
 #gallery img {
-    width: 100%; /* 填充父元素寬度 */
-    height: 100%; /* 填充父元素高度 */
-    object-fit: cover; /* 模擬 background-size: cover 的效果 */
+    width: 100%;
+    /* 填充父元素寬度 */
+    height: 100%;
+    /* 填充父元素高度 */
+    object-fit: cover;
+    /* 模擬 background-size: cover 的效果 */
 }
 
 #gallery [class*='col-'] {
-    padding: 0;    
+    padding: 0;
     height: 200px;
     background-color: #e3e3e3;
 }
@@ -1551,7 +1555,7 @@ blockquote {
 
 .pricing-block ul {
     list-style: none;
-    margin: 25px 0 25px 0;
+    /* margin: 25px 0 25px 0; */
 }
 
 .pricing-block li {
@@ -1565,7 +1569,6 @@ blockquote {
 
 .pricing-block h3 {
     font-size: 17px;
-    text-transform: uppercase;
     padding-bottom: 0;
 }
 
@@ -1585,18 +1588,14 @@ blockquote {
 }
 
 .price {
-    display: inline-block;
-    font-size: 62px;
     font-weight: 700;
     position: relative;
 }
 
-.price span {
-    position: absolute;
-    top: 0;
-    left: -20px;
-    font-size: 22px;
+.price#jCard-box-location {
+    margin-top: 20px;
 }
+
 
 .pricing p {
     font-style: italic;
@@ -1605,6 +1604,25 @@ blockquote {
     margin: 0;
 }
 
+#jCard-box-title {
+    font-size: 22px;
+}
+
+#jCard-box-location #jCard-box-name {
+    font-size: 13px;
+}
+
+#jCard-box-location #jCard-box-location {
+    font-size: 13px;
+}
+
+#jCard-box-date {
+    font-size: 12px;
+}
+
+#jCard.featured .pricing ::selection {
+    background: #57be90;
+}
 
 /*------------------------------------------------------------------------------------------*/
 

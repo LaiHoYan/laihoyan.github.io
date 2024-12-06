@@ -12,8 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // 用於記錄每個 imgElement 當前顯示的圖片路徑
     const currentImages = new Map();
 
+    const imagePaths=generateImagePaths(projectsJson);
+    function generateImagePaths(projects) {
+        let generatedImagePaths = [];
+
+        projects.forEach(project => {
+            const basePath = `Pages/Projects/${project.name}/asset/slide/`;
+            for (let i = 0; i < project.imageCount; i++) {
+                generatedImagePaths.push(`${basePath}${i}.jpg`);
+            }
+        });
+
+        return generatedImagePaths;
+    }
     // 初始化圖片
     function initializeImages() {
+        //slide = generateImagePaths(projectsJson);
+        //console.log(slide.length);
         const shuffledImages = shuffleArray([...imagePaths]);
         galleryElements.forEach((imgElement, index) => {
             const imagePath = shuffledImages[index];
@@ -21,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             currentImages.set(imgElement, imagePath);
         });
     }
-
     // 隨機打亂圖片數組
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {

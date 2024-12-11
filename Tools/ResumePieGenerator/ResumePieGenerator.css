@@ -1,0 +1,66 @@
+circle {
+    fill: none;
+    stroke-dashoffset: -1275;
+    transform: translate(225px, 225px) rotate(-90deg);
+}
+
+.green {
+    .stroke-main {
+        stroke: #4df3b1;
+    }
+}
+
+.red {
+    .stroke-main {
+        stroke: #F9423A;
+    }
+}
+
+.stroke-main {
+    stroke-width: 70;
+    /* transition: stroke-dashoffset 2s ease 0.5s; */
+}
+
+.stroke-secondary {
+    stroke: #f3e1cb;
+    stroke-width: 30;
+}
+
+/* Presentation styles */
+
+body {
+    margin: 0;
+}
+
+.background {
+    align-items: center;
+    background: #7a8a9b;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 80vmin;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 90vmin;
+}
+
+.card {
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    color: black;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50%;
+    justify-content: center;
+    width: 50%;
+}

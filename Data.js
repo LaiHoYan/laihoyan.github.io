@@ -16,7 +16,7 @@ const projectsJson = [
 const journeyData = [
     {
         isJob: true,
-        title: "Attigas Stuido",
+        title: "Attigas Studio",
         boxTitle: "Game Programmer",
         boxName: "",
         boxLocation: "Canada",

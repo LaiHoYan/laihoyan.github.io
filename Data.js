@@ -69,7 +69,7 @@ const journeyData = [
         boxTitle: "Cross-Platform Games and Animation Production",
         boxName: "Hong Kong College of Technology (HKCT)",
         boxLocation: "Hong Kong",
-        boxDate: "2018 ~ 2009",
+        boxDate: "2018 ~ 2019",
         keys: [
             , "Java"
             , "Unity"
